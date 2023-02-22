@@ -1,0 +1,77 @@
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ nano answers.txt 
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ nano answers.txt 
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git add .
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git commit "answered question in main branch"
+error: pathspec 'answered question in main branch' did not match any file(s) known to git
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git commit -m "answered question in main branch"
+[main 089441e] answered question in main branch
+ 1 file changed, 8 insertions(+)
+ create mode 100644 answers.txt
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 516 bytes | 516.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/RodrigoSandon/homework1.git
+   b1ca52d..089441e  main -> main
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git checkout progress
+error: pathspec 'progress' did not match any file(s) known to git
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git checkout -b progress 
+Switched to a new branch 'progress'
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ nano answers.txt 
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git checkout main
+M	answers.txt
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git merge progress
+Already up to date.
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git checkout progress
+M	answers.txt
+Switched to branch 'progress'
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git add .
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git commit "answered hw1 in progress branch"
+error: pathspec 'answered hw1 in progress branch' did not match any file(s) known to git
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git commit -m "answered hw1 in progress branch"
+[progress 3dc5407] answered hw1 in progress branch
+ 1 file changed, 6 insertions(+)
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git push
+fatal: The current branch progress has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin progress
+
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git merge progress
+Updating 089441e..3dc5407
+Fast-forward
+ answers.txt | 6 ++++++
+ 1 file changed, 6 insertions(+)
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git commit -m "merged main and progress branch"
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 491 bytes | 491.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/RodrigoSandon/homework1.git
+   089441e..3dc5407  main -> main
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git checkout progress
+Already on 'progress'
+Your branch is up to date with 'origin/progress'.
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git push --set-upstream origin progress
+Branch 'progress' set up to track remote branch 'progress' from 'origin'.
+Everything up-to-date
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ git push
+Everything up-to-date
+(base) wireless-10-104-125-118:homework1 rodrigosandon$ 
